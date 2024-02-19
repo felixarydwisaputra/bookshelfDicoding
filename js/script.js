@@ -49,9 +49,10 @@ const tambahBuku = () => {
   const generateID = generateId();
   const textJudul = document.getElementById('judul').value
   const textPenulis = document.getElementById('penulis').value
-  const textTahun = document.getElementById('tahun').value
+  const textTahun = parseInt(document.getElementById('tahun').value)
 
   const objekBuku = buatObjek(generateID, textJudul, textPenulis, textTahun, false)
+  console.log(objekBuku)
   rakBuku.push(objekBuku)
 
   document.dispatchEvent(new Event(RENDER_EVENT))
