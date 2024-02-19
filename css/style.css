@@ -1,0 +1,350 @@
+:root{
+  --normaFont: "Montserrat", sans-serif;
+  --titleFont: "Montserrat Alternates", sans-serif;
+
+  --third: #F9D126;
+  --abu: #D9D9D9;
+}
+
+.d-none{
+  display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--normaFont);
+}
+
+body{
+  position: relative;
+  background-color: rgb(238,238,238);
+}
+
+.dialog-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0,0,0,.7);
+  z-index: 199;
+}
+
+.dialog-box .box{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  width: 30dvw;
+  height: 25dvh;
+  background-color: var(--abu);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 1px 4px 10px rgba(0,0,0,.7);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.dialog-box .box .button-wrapper{
+  display: flex;
+  gap: 2rem;
+}
+
+.dialog-box .box .button-wrapper button{
+  width: 10rem;
+  padding: .7rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.dialog-box .box .button-wrapper .hapus{
+  background-color: var(--third);
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 7%;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}
+
+header h1{
+  color: white;
+  font-family: var(--titleFont);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+header .search-box input{
+  width: 30dvw;
+  padding: .5rem .5rem; 
+  border: none;
+  font-size: 1rem;
+}
+
+header .search-box input:focus{
+  outline: none;
+}
+
+header .search-box{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: .4rem .8rem;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.3);
+  gap: .7rem;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+header .search-box i{
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: .4rem .5rem;
+  background-color: var(--third);
+  border-radius: 50%;
+}
+
+main{
+  display: flex;
+  justify-content: end;
+}
+
+main .kiri{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  color: white;
+}
+
+main .kiri .content{
+  margin-left: 5dvw;
+}
+
+main .kiri .input{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.3rem;
+}
+
+main .kiri .input label{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+main .kiri .input input{
+  width: 28dvw;
+  padding: .7rem;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  border: none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+main .kiri .input input:focus{
+  outline: 3px solid var(--third);
+}
+
+main .kiri button{
+  margin-top: 1.3rem;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--third);
+  border: none;
+  border-radius: 5px;
+  transition: .5s all ease;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  -ms-transition: .5s all ease;
+  -o-transition: .5s all ease;
+}
+
+main .kiri button:hover{
+  box-shadow: 1px 1px 10px var(--third);
+}
+
+main .kiri img{
+  position: absolute;
+  height: 100%;
+  z-index: -99;
+}
+
+main .kanan{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+main .kanan h2{
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+main .kanan .content{
+  display: flex;
+  width: 50dvw;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding-left: 3rem;
+  padding-top: 3rem;
+  padding-right: 9rem;
+}
+
+.img-lottie{
+  display: flex;
+  justify-content: center;
+  font-weight: lighter;
+  margin-top: 5rem;
+}
+
+.img-lottie img{
+  width: 250px;
+}
+
+.lottie h3{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: grey;
+  font-family: var(--titleFont);
+}
+
+main .kanan .content .belum-selesai,
+main .kanan .content .sudah-selesai{
+  display: none;
+  background-color: var(--abu);
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.item-title{
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: .3rem;
+}
+
+main .kanan .content p{
+  margin-bottom: .5rem;
+}
+
+.item-list{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.item-list .item-body{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.item-list .item-body .item-desc{
+  flex: 1;
+}
+
+.item-list .item-body .item-button{
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.item-list .item-body .item-button .button-selesai,
+.item-list .item-body .item-button .button-hapus{
+  background-color: var(--third);
+  width: 50%;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.item-list .item-body .item-button .button-selesai{
+  background-color: var(--third);
+}
+
+.item-list .item-body .item-button .button-hapus{
+  background-color: black;
+  color: white;
+}
+
+
+@media (max-width: 1280px) {
+  html{
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 900px){
+  header,
+  main{
+    display: none;
+  }
+
+  body::after{
+    content: "COMING SOON";
+    position: absolute;
+    font-size: 5rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 50%;
+  }
+}
+
+@media (max-width: 500px){
+  html{
+    font-size: 40.2%;
+  }
+}
+
+@media (max-width: 300px){
+  html{
+    font-size: 20.2%;
+  }
+}

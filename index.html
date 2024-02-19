@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps | Websites</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header>
+    <h1>Bookshelf Apps</h1>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Mau baca buku apa hari ini?"><i class="ri-search-line" id="search-button"> </i>
+    </div>
+  </header>
+
+  <main>
+    <aside class="kiri">
+      <img src="assets/img/background.png" alt="">
+      <div class="content">
+        <form id="inputBook">
+          <div class="input">
+            <label for="judul">Judul Buku</label>
+            <input type="text" id="judul" name="judul" required autocomplete="off">
+          </div>
+          <div class="input">
+            <label for="penulis">Penulis Buku</label>
+            <input type="text" id="penulis" name="penulis" required autocomplete="off">
+          </div>
+          <div class="input">
+            <label for="tahun">Tahun</label>
+            <input type="number" min="1000" max="2024" value="2024" id="tahun" name="tahun">
+          </div>
+          <button type="submit">Tambah Buku ke Rak</button>
+        </form>
+      </div>
+    </aside>
+    <div class="kanan">
+      <div class="content" id="content">
+        <div class="lottie">
+          <div class="img-lottie">
+            <img src="assets/img/lottie.png" alt="">
+          </div>
+          <h3>Rak Anda Masih Kosong...</h3>
+        </div>
+
+
+        <div class="belum-selesai">
+          <h2>Belum Selesai Dibaca</h2>
+          <div class="belum-list-item"></div>
+        </div>
+
+        <div class="sudah-selesai">
+          <h2>Sudah Selesai Dibaca</h2>
+          <div class="sudah-list-item"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
