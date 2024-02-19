@@ -175,7 +175,6 @@ main .kiri .input input:focus{
 }
 
 main .kiri button{
-  margin-top: 1.3rem;
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -202,6 +201,18 @@ main .kiri img{
   position: absolute;
   height: 100%;
   z-index: -99;
+}
+
+main .kiri .wrap-button{
+  display: flex;
+  margin-top: 4rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .kiri .wrap-button p{
+  display: inline;
+  margin-right: .4rem;
 }
 
 main .kanan{

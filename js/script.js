@@ -3,9 +3,10 @@ let rakPencarian = [];
 const RENDER_EVENT = 'render_buku'
 const STORAGE_KEY = 'rak_buku'
 const SAVED_DATA = 'storage_save'
+let selesaiState = false
 
 document.addEventListener('DOMContentLoaded', () => {
-
+  
   const searchButton = document.getElementById('search-button')
   searchButton.addEventListener('click', () => {
     const keyword = document.getElementById('search').value
@@ -16,6 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.dispatchEvent(new Event(RENDER_EVENT))
+  })
+
+  const checkBox = document.getElementById('check')
+  checkBox.addEventListener('change', () => {
+    if(checkBox.checked){
+      console.log("ini :",true)
+      selesaiState = true
+    } else{
+      console.log("ini :",false)
+      selesaiState = false
+    }
   })
 
   const submitForm = document.getElementById('inputBook')
@@ -51,7 +63,7 @@ const tambahBuku = () => {
   const textPenulis = document.getElementById('penulis').value
   const textTahun = parseInt(document.getElementById('tahun').value)
 
-  const objekBuku = buatObjek(generateID, textJudul, textPenulis, textTahun, false)
+  const objekBuku = buatObjek(generateID, textJudul, textPenulis, textTahun, selesaiState)
   console.log(objekBuku)
   rakBuku.push(objekBuku)
 
